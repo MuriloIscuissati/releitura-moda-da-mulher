@@ -1,0 +1,256 @@
+<svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <defs>
+    <!-- Gradientes -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </radialGradient>
+    
+    <radialGradient id="skullGrad" cx="50%" cy="40%">
+      <stop offset="0%" style="stop-color:#2a2a2a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
+    </radialGradient>
+    
+    <radialGradient id="eyeGlow" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#ff0000;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#cc0000;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#660000;stop-opacity:0.3" />
+    </radialGradient>
+    
+    <linearGradient id="metalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="50%" style="stop-color:#cccccc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#888888;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+  
+  <!-- Background transparente -->
+  
+  <!-- Asas detalhadas -->
+  <!-- Asa esquerda -->
+  <g opacity="0.95" filter="url(#shadow)">
+    <!-- Penas maiores -->
+    <path d="M 320,250 Q 260,200 200,180 Q 150,170 120,185 Q 100,195 110,220 Q 120,240 160,255 Q 200,265 260,265 Z" 
+          fill="#1a1a1a" stroke="#666" stroke-width="2"/>
+    <path d="M 310,245 Q 255,205 205,190 Q 165,180 140,192 Q 125,200 132,218 Q 142,235 175,247 Q 215,258 270,258 Z" 
+          fill="#0f0f0f" stroke="#888" stroke-width="1"/>
+    
+    <!-- Penas médias -->
+    <path d="M 340,255 Q 290,220 240,210 Q 200,205 180,220 Q 168,230 178,248 Q 190,262 225,270 Q 270,278 320,275 Z" 
+          fill="#1a1a1a" stroke="#666" stroke-width="2"/>
+    <path d="M 335,258 Q 295,230 250,222 Q 215,217 198,228 Q 188,236 195,250 Q 205,263 235,269 Q 275,276 325,273 Z" 
+          fill="#0f0f0f" stroke="#888" stroke-width="1"/>
+    
+    <!-- Penas menores -->
+    <path d="M 360,260 Q 320,240 280,235 Q 250,232 235,245 Q 228,253 235,265 Q 245,275 275,280 Q 310,285 350,282 Z" 
+          fill="#1a1a1a" stroke="#666" stroke-width="2"/>
+    
+    <!-- Detalhes das penas -->
+    <path d="M 150,210 Q 180,220 210,225" fill="none" stroke="#444" stroke-width="1"/>
+    <path d="M 160,225 Q 185,235 210,238" fill="none" stroke="#444" stroke-width="1"/>
+    <path d="M 190,245 Q 215,255 240,258" fill="none" stroke="#444" stroke-width="1"/>
+    <path d="M 220,260 Q 245,268 270,270" fill="none" stroke="#444" stroke-width="1"/>
+  </g>
+  
+  <!-- Asa direita (espelhada) -->
+  <g opacity="0.95" filter="url(#shadow)">
+    <path d="M 680,250 Q 740,200 800,180 Q 850,170 880,185 Q 900,195 890,220 Q 880,240 840,255 Q 800,265 740,265 Z" 
+          fill="#1a1a1a" stroke="#666" stroke-width="2"/>
+    <path d="M 690,245 Q 745,205 795,190 Q 835,180 860,192 Q 875,200 868,218 Q 858,235 825,247 Q 785,258 730,258 Z" 
+          fill="#0f0f0f" stroke="#888" stroke-width="1"/>
+    
+    <path d="M 660,255 Q 710,220 760,210 Q 800,205 820,220 Q 832,230 822,248 Q 810,262 775,270 Q 730,278 680,275 Z" 
+          fill="#1a1a1a" stroke="#666" stroke-width="2"/>
+    <path d="M 665,258 Q 705,230 750,222 Q 785,217 802,228 Q 812,236 805,250 Q 795,263 765,269 Q 725,276 675,273 Z" 
+          fill="#0f0f0f" stroke="#888" stroke-width="1"/>
+    
+    <path d="M 640,260 Q 680,240 720,235 Q 750,232 765,245 Q 772,253 765,265 Q 755,275 725,280 Q 690,285 650,282 Z" 
+          fill="#1a1a1a" stroke="#666" stroke-width="2"/>
+    
+    <path d="M 850,210 Q 820,220 790,225" fill="none" stroke="#444" stroke-width="1"/>
+    <path d="M 840,225 Q 815,235 790,238" fill="none" stroke="#444" stroke-width="1"/>
+    <path d="M 810,245 Q 785,255 760,258" fill="none" stroke="#444" stroke-width="1"/>
+    <path d="M 780,260 Q 755,268 730,270" fill="none" stroke="#444" stroke-width="1"/>
+  </g>
+  
+  <!-- Caveira central detalhada -->
+  <g transform="translate(500, 250)">
+    <!-- Base do crânio -->
+    <ellipse cx="0" cy="-25" rx="85" ry="95" fill="url(#skullGrad)" stroke="#888" stroke-width="2.5"/>
+    <ellipse cx="0" cy="-25" rx="80" ry="90" fill="#0a0a0a" stroke="#666" stroke-width="1"/>
+    
+    <!-- Sombras e contornos do crânio -->
+    <path d="M -70,-30 Q -75,-10 -70,10" fill="none" stroke="#000" stroke-width="2" opacity="0.6"/>
+    <path d="M 70,-30 Q 75,-10 70,10" fill="none" stroke="#000" stroke-width="2" opacity="0.6"/>
+    
+    <!-- Testa com detalhes -->
+    <path d="M -50,-70 Q 0,-85 50,-70" fill="none" stroke="#555" stroke-width="1.5"/>
+    <path d="M -40,-75 Q 0,-88 40,-75" fill="none" stroke="#444" stroke-width="1"/>
+    
+    <!-- Órbitas oculares detalhadas -->
+    <ellipse cx="-32" cy="-35" rx="22" ry="30" fill="#000" stroke="#999" stroke-width="2.5"/>
+    <ellipse cx="-32" cy="-35" rx="20" ry="28" fill="#050505" stroke="#666" stroke-width="1"/>
+    <path d="M -44,-50 Q -32,-55 -20,-50" fill="none" stroke="#444" stroke-width="1.5"/>
+    <path d="M -44,-20 Q -32,-15 -20,-20" fill="none" stroke="#444" stroke-width="1.5"/>
+    
+    <ellipse cx="32" cy="-35" rx="22" ry="30" fill="#000" stroke="#999" stroke-width="2.5"/>
+    <ellipse cx="32" cy="-35" rx="20" ry="28" fill="#050505" stroke="#666" stroke-width="1"/>
+    <path d="M 20,-50 Q 32,-55 44,-50" fill="none" stroke="#444" stroke-width="1.5"/>
+    <path d="M 20,-20 Q 32,-15 44,-20" fill="none" stroke="#444" stroke-width="1.5"/>
+    
+    <!-- Olhos brilhantes com glow -->
+    <ellipse cx="-32" cy="-35" rx="12" ry="18" fill="url(#eyeGlow)" filter="url(#glow)"/>
+    <ellipse cx="32" cy="-35" rx="12" ry="18" fill="url(#eyeGlow)" filter="url(#glow)"/>
+    <ellipse cx="-32" cy="-40" rx="5" ry="7" fill="#ff6666" opacity="0.8"/>
+    <ellipse cx="32" cy="-40" rx="5" ry="7" fill="#ff6666" opacity="0.8"/>
+    
+    <!-- Cavidade nasal detalhada -->
+    <path d="M -12,-8 L -6,5 L 0,0 L 6,5 L 12,-8 Q 8,-12 0,-10 Q -8,-12 -12,-8 Z" 
+          fill="#000" stroke="#888" stroke-width="2"/>
+    <path d="M -10,-8 L -5,3 L 0,-1 L 5,3 L 10,-8" fill="none" stroke="#444" stroke-width="1"/>
+    
+    <!-- Zigomático (maçãs do rosto) -->
+    <path d="M -60,-10 Q -70,0 -65,15" fill="none" stroke="#555" stroke-width="2" opacity="0.5"/>
+    <path d="M 60,-10 Q 70,0 65,15" fill="none" stroke="#555" stroke-width="2" opacity="0.5"/>
+    
+    <!-- Maxilar superior -->
+    <path d="M -60,15 L -60,20 Q -50,25 -40,25 L -35,28 L 35,28 L 40,25 Q 50,25 60,20 L 60,15 Z" 
+          fill="#1a1a1a" stroke="#888" stroke-width="2"/>
+    
+    <!-- Dentes superiores detalhados -->
+    <g>
+      <!-- Dente 1 -->
+      <rect x="-50" y="18" width="14" height="20" rx="1" fill="url(#metalGrad)" stroke="#666" stroke-width="1.2"/>
+      <line x1="-43" y1="20" x2="-43" y2="35" stroke="#999" stroke-width="0.5"/>
+      
+      <!-- Dente 2 -->
+      <rect x="-33" y="18" width="14" height="20" rx="1" fill="url(#metalGrad)" stroke="#666" stroke-width="1.2"/>
+      <line x1="-26" y1="20" x2="-26" y2="35" stroke="#999" stroke-width="0.5"/>
+      
+      <!-- Dente 3 (canino) -->
+      <path d="M -16,18 L -16,40 L -10,38 L -4,40 L -4,18 Z" fill="url(#metalGrad)" stroke="#666" stroke-width="1.2"/>
+      <line x1="-10" y1="20" x2="-10" y2="36" stroke="#999" stroke-width="0.5"/>
+      
+      <!-- Dente 4 (canino) -->
+      <path d="M 4,18 L 4,40 L 10,38 L 16,40 L 16,18 Z" fill="url(#metalGrad)" stroke="#666" stroke-width="1.2"/>
+      <line x1="10" y1="20" x2="10" y2="36" stroke="#999" stroke-width="0.5"/>
+      
+      <!-- Dente 5 -->
+      <rect x="19" y="18" width="14" height="20" rx="1" fill="url(#metalGrad)" stroke="#666" stroke-width="1.2"/>
+      <line x1="26" y1="20" x2="26" y2="35" stroke="#999" stroke-width="0.5"/>
+      
+      <!-- Dente 6 -->
+      <rect x="36" y="18" width="14" height="20" rx="1" fill="url(#metalGrad)" stroke="#666" stroke-width="1.2"/>
+      <line x1="43" y1="20" x2="43" y2="35" stroke="#999" stroke-width="0.5"/>
+    </g>
+    
+    <!-- Mandíbula inferior detalhada -->
+    <path d="M -65,30 Q -70,45 -65,58 Q -60,68 -45,72 L -35,75 L -15,78 L 0,79 L 15,78 L 35,75 L 45,72 Q 60,68 65,58 Q 70,45 65,30" 
+          fill="#1a1a1a" stroke="#888" stroke-width="2.5"/>
+    <path d="M -63,32 Q -67,45 -63,56 Q -58,65 -45,69 L -35,72 L -15,75 L 0,76 L 15,75 L 35,72 L 45,69 Q 58,65 63,56 Q 67,45 63,32" 
+          fill="#0f0f0f" stroke="#666" stroke-width="1"/>
+    
+    <!-- Queixo com textura -->
+    <ellipse cx="0" cy="73" rx="25" ry="10" fill="#000" opacity="0.3"/>
+    <path d="M -20,75 Q 0,78 20,75" fill="none" stroke="#444" stroke-width="1"/>
+    
+    <!-- Dentes inferiores -->
+    <g>
+      <rect x="-45" y="54" width="12" height="16" rx="1" fill="url(#metalGrad)" stroke="#666" stroke-width="1"/>
+      <line x1="-39" y1="56" x2="-39" y2="68" stroke="#999" stroke-width="0.5"/>
+      
+      <rect x="-30" y="54" width="12" height="16" rx="1" fill="url(#metalGrad)" stroke="#666" stroke-width="1"/>
+      <line x1="-24" y1="56" x2="-24" y2="68" stroke="#999" stroke-width="0.5"/>
+      
+      <rect x="-15" y="54" width="12" height="16" rx="1" fill="url(#metalGrad)" stroke="#666" stroke-width="1"/>
+      <line x1="-9" y1="56" x2="-9" y2="68" stroke="#999" stroke-width="0.5"/>
+      
+      <rect x="3" y="54" width="12" height="16" rx="1" fill="url(#metalGrad)" stroke="#666" stroke-width="1"/>
+      <line x1="9" y1="56" x2="9" y2="68" stroke="#999" stroke-width="0.5"/>
+      
+      <rect x="18" y="54" width="12" height="16" rx="1" fill="url(#metalGrad)" stroke="#666" stroke-width="1"/>
+      <line x1="24" y1="56" x2="24" y2="68" stroke="#999" stroke-width="0.5"/>
+      
+      <rect x="33" y="54" width="12" height="16" rx="1" fill="url(#metalGrad)" stroke="#666" stroke-width="1"/>
+      <line x1="39" y1="56" x2="39" y2="68" stroke="#999" stroke-width="0.5"/>
+    </g>
+    
+    <!-- Rachaduras e detalhes -->
+    <path d="M -55,-60 L -48,-45" stroke="#333" stroke-width="1.5" opacity="0.6"/>
+    <path d="M 55,-60 L 48,-45" stroke="#333" stroke-width="1.5" opacity="0.6"/>
+    <path d="M -25,-80 Q -20,-75 -22,-70" stroke="#333" stroke-width="1" opacity="0.5"/>
+    <path d="M 25,-80 Q 20,-75 22,-70" stroke="#333" stroke-width="1" opacity="0.5"/>
+  </g>
+  
+  <!-- Correntes decorativas -->
+  <g opacity="0.4">
+    <circle cx="380" cy="250" r="8" fill="none" stroke="#666" stroke-width="2"/>
+    <circle cx="620" cy="250" r="8" fill="none" stroke="#666" stroke-width="2"/>
+    <line x1="388" y1="250" x2="420" y2="250" stroke="#666" stroke-width="2"/>
+    <line x1="580" y1="250" x2="612" y2="250" stroke="#666" stroke-width="2"/>
+  </g>
+  
+  <!-- Texto "LOJA" -->
+  <text x="500" y="90" font-family="Impact, Arial Black, sans-serif" font-size="75" 
+        font-weight="900" text-anchor="middle" fill="#000" 
+        stroke="#000" stroke-width="8" letter-spacing="12" filter="url(#shadow)">
+    LOJA
+  </text>
+  <text x="500" y="90" font-family="Impact, Arial Black, sans-serif" font-size="75" 
+        font-weight="900" text-anchor="middle" fill="#1a1a1a" 
+        stroke="#333" stroke-width="4" letter-spacing="12">
+    LOJA
+  </text>
+  <text x="500" y="90" font-family="Impact, Arial Black, sans-serif" font-size="75" 
+        font-weight="900" text-anchor="middle" fill="url(#metalGrad)" letter-spacing="12">
+    LOJA
+  </text>
+  
+  <!-- Texto "SINISTRA" -->
+  <text x="500" y="430" font-family="Impact, Arial Black, sans-serif" font-size="75" 
+        font-weight="900" text-anchor="middle" fill="#000" 
+        stroke="#000" stroke-width="8" letter-spacing="12" filter="url(#shadow)">
+    SINISTRA
+  </text>
+  <text x="500" y="430" font-family="Impact, Arial Black, sans-serif" font-size="75" 
+        font-weight="900" text-anchor="middle" fill="#1a1a1a" 
+        stroke="#333" stroke-width="4" letter-spacing="12">
+    SINISTRA
+  </text>
+  <text x="500" y="430" font-family="Impact, Arial Black, sans-serif" font-size="75" 
+        font-weight="900" text-anchor="middle" fill="url(#metalGrad)" letter-spacing="12">
+    SINISTRA
+  </text>
+  
+  <!-- Ornamentos nos cantos -->
+  <g opacity="0.3">
+    <!-- Canto superior esquerdo -->
+    <path d="M 50,50 L 100,50 L 75,75 Z" fill="none" stroke="#666" stroke-width="2"/>
+    <path d="M 50,50 L 50,100 L 75,75 Z" fill="none" stroke="#666" stroke-width="2"/>
+    
+    <!-- Canto superior direito -->
+    <path d="M 950,50 L 900,50 L 925,75 Z" fill="none" stroke="#666" stroke-width="2"/>
+    <path d="M 950,50 L 950,100 L 925,75 Z" fill="none" stroke="#666" stroke-width="2"/>
+    
+    <!-- Canto inferior esquerdo -->
+    <path d="M 50,450 L 100,450 L 75,425 Z" fill="none" stroke="#666" stroke-width="2"/>
+    <path d="M 50,450 L 50,400 L 75,425 Z" fill="none" stroke="#666" stroke-width="2"/>
+    
+    <!-- Canto inferior direito -->
+    <path d="M 950,450 L 900,450 L 925,425 Z" fill="none" stroke="#666" stroke-width="2"/>
+    <path d="M 950,450 L 950,400 L 925,425 Z" fill="none" stroke="#666" stroke-width="2"/>
+  </g>
+</svg>

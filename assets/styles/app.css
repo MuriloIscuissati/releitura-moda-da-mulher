@@ -1,0 +1,51 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+@font-face {
+    font-family: 'Abel';
+    src: url('../fonts/abel/Abel-Regular.ttf');
+}
+
+:root {
+    --cor-primaria: #ffff;
+    --cor-secundaria: #151515;
+}
+
+.bg-cor-primaria {
+    background-color: var(--cor-primaria) !important;
+}
+
+.bg-cor-secundaria {
+    background-color: var(--cor-secundaria) !important;
+}
+
+.text-cor-primaria{
+    color: var(--cor-primaria);
+}
+
+.text-cor-secundaria{
+    color: var(--cor-secundaria);
+}
+
+body {
+    font-family: 'Abel', Arial, sans-serif;
+}
+
+footer ul{
+    
+        list-style: none;
+        padding: 0;
+    
+}
+
+.voltar{
+
+    background-color: #270665;
+    width: 20vh;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.voltar a{
+    text-decoration: none;
+    color: var(--cor-primaria);
+}
